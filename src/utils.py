@@ -1,9 +1,7 @@
 import sys
-from src.exception import CustomException
+from src.logger import logging
 
-try:
-    a = 9
-    b = 0
-    result = a/b
-except Exception as e:
-    raise CustomException(e,sys)
+a = 10
+b = 3
+logging.info('correct')
+sum = a+b
