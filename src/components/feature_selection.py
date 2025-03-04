@@ -11,10 +11,10 @@ from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 
 @dataclass
-class Feature_selection_Config():
+class Feature_selection_Config:
     features_data_path: str = os.path.join('artifacts','features.csv')
 
-class FeatureSelection():
+class FeatureSelection:
     def __init__(self):
         self.feature_path = Feature_selection_Config()
     

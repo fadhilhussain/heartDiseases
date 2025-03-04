@@ -10,6 +10,8 @@ from src.components.feature_selection import FeatureSelection
 @dataclass
 class DataIngestionConfig:
     raw_data_path: str = os.path.join('artifacts','data.csv')
+    train_data_path : str = os.path.join('artifacts','train.csv')
+    test_data_path : str = os.path.join('artifacts','test.csv')
 
 class DataIngestion:
     def __init__(self):
@@ -35,6 +37,25 @@ class DataIngestion:
         except Exception as e:
             raise CustomException(e,sys)
         
+    def data_splitting(self,data):
+        try:
+            df = pd.read_csv(data)
+
+            train_data,test_data = train_test_split(df,test_size=0.3,random_state=42,stratify=df['TenYearCHD'])
+
+            #save to artifacts folder 
+            train_data.to_csv(self.data_config.train_data_path,index=False,header=True)
+            test_data.to_csv(self.data_config.test_data_path,index=False,header=True)
+
+            logging.info('train and test split done')
+            return(
+                self.data_config.train_data_path,
+                self.data_config.test_data_path
+            )
+        except Exception as e:
+            raise CustomException(e,sys)
+
+        
 
 if __name__ == '__main__':
     object = DataIngestion()
@@ -43,3 +64,6 @@ if __name__ == '__main__':
     #feature selection 
     feature_selection = FeatureSelection()
     selected_feature_data = feature_selection.feature_selection(raw_data,threshold=0.01)
+    train_data, test_data = object.data_splitting(selected_feature_data)
+
+
