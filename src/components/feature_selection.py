@@ -20,10 +20,10 @@ class FeatureSelection:
     
     def feature_selection(self,data,threshold):
         try:
-
+            df_data = pd.read_csv(data)
             #independent and dependent feature
             X, y = split_features(
-                data = data
+                data = df_data
             )
 
             ## feature selection by TreeBased Feature Importance

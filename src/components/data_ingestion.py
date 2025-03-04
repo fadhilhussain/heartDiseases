@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from src.logger import logging 
 from dataclasses import dataclass
 from src.components.feature_selection import FeatureSelection
+from src.components.data_transformation import DataTransormation
 
 @dataclass
 class DataIngestionConfig:
@@ -66,4 +67,7 @@ if __name__ == '__main__':
     selected_feature_data = feature_selection.feature_selection(raw_data,threshold=0.01)
     train_data, test_data = object.data_splitting(selected_feature_data)
 
-
+    #data transformation
+    data_transformation = DataTransormation()
+    train_array, test_array = data_transformation.initiate_transformation(train_data,test_data)
+    
