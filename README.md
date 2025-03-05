@@ -38,32 +38,32 @@ Deployment
 ## Web UI
 ![web-ui](notebook/images/web.png)
 
-Flask API for model prediction
-How to Use
+## Flask API for model prediction
+
+### How to Use
 Clone the repository:
 bash
 Copy
 Edit
 git clone https://github.com/yourusername/heart-disease-prediction.git
-Install dependencies:
-bash
-Copy
-Edit
+### Install dependencies:
 pip install -r requirements.txt
-Run the Flask app:
-bash
-Copy
-Edit
+### Run the Flask app:
 python app.py
-Access the web interface at http://127.0.0.1:5000/
-Technologies Used
-Python (Pandas, NumPy, Scikit-Learn)
-Flask (for deployment)
-Matplotlib & Seaborn (for visualization)
+
+### Access the web interface at 
+http://127.0.0.1:5000/
+
+### Technologies Used
+ - Python (Pandas, NumPy, Scikit-Learn)
+ - Flask (for deployment)
+ - Matplotlib & Seaborn (for visualization)
 
 ## Output
 ![web-ui](notebook/images/result.png)
-Conclusion
+
+## Conclusion
+
 This project demonstrates how logistic regression can be applied to predict heart disease risk using structured health data.
 
 
