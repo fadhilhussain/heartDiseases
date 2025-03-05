@@ -1,5 +1,5 @@
 ## Heart Disease Prediction - Logistic Regression
-###Project Overview
+### Project Overview
 
 This project aims to predict the 10-year risk of coronary heart disease (CHD) using logistic regression. The dataset is sourced from Kaggle and includes various health-related features. The project follows an end-to-end machine learning pipeline, from data preprocessing to model evaluation and deployment.
 
