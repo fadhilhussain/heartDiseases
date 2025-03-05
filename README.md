@@ -45,7 +45,7 @@ Data Preprocessing
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/heart-disease-prediction.git
+git clone https://github.com/fadhilhussain/heart-disease-prediction.git
 ```
 ### Install dependencies:
 ```bash
