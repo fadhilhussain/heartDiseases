@@ -7,6 +7,7 @@ from src.logger import logging
 from dataclasses import dataclass
 from src.components.feature_selection import FeatureSelection
 from src.components.data_transformation import DataTransormation
+from src.components.model_trainer import ModelTrainer
 
 @dataclass
 class DataIngestionConfig:
@@ -70,4 +71,8 @@ if __name__ == '__main__':
     #data transformation
     data_transformation = DataTransormation()
     train_array, test_array = data_transformation.initiate_transformation(train_data,test_data)
+
+    #model training 
+    model_trainer = ModelTrainer()
+    print(model_trainer.model_trainer(train_array,test_array))
     
