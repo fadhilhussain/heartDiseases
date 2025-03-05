@@ -31,12 +31,17 @@ def index():
         predict_pipline = PredictPipeline()
         result = predict_pipline.predict(prediction_data)
 
+        if data.gender == 1:
+            gender = 'Male'
+        else:
+            gender = 'Female'
+
         pdf = FPDF()
         pdf.add_page()
         pdf.set_font('Arial',size=12)
         pdf.cell(200, 10, txt="CHD Prediction Report", ln=True, align='C')
         pdf.ln(10)
-        pdf.cell(200, 10, txt=f"Gender: {data.gender}", ln=True)
+        pdf.cell(200, 10, txt=f"Gender: {gender}", ln=True)
         pdf.cell(200, 10, txt=f"Age: {data.age}", ln=True)
         pdf.cell(200, 10, txt=f"Education: {data.education}", ln=True)
         pdf.cell(200, 10, txt=f"Current Smoker: {data.currentSmoker}", ln=True)
