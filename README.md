@@ -18,23 +18,23 @@ Target Variable: TenYearCHD
 ### Project Workflow
 Data Preprocessing
 
-Handling missing values
-Outlier treatment
-Exploratory Data Analysis (EDA)
+- Handling missing values
+- Outlier treatment
+- Exploratory Data Analysis (EDA)
 
-Visualizing feature distributions
-Correlation analysis
+- Visualizing feature distributions
+- Correlation analysis
 
-Feature scaling
-Model Development
+- Feature scaling
+- Model Development
 
-Logistic Regression
-Hyperparameter tuning
-Model Evaluation
+- Multiple Model training 
+- Hyperparameter tuning
+- Model Evaluation
 
-Accuracy, Precision, Recall, F1-score
-Confusion Matrix
-Deployment
+- Accuracy, Precision, Recall, F1-score
+- Confusion Matrix
+- Deployment
 
 ## Web UI
 ![web-ui](notebook/images/web.png)
