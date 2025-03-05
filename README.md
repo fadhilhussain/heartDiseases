@@ -43,16 +43,23 @@ Deployment
 ### How to Use
 Clone the repository:
 
-'''bash
+```bash
 git clone https://github.com/yourusername/heart-disease-prediction.git
-
+```
 ### Install dependencies:
+```bash
 pip install -r requirements.txt
+
+```
 ### Run the Flask app:
+```
 python app.py
+```
 
 ### Access the web interface at 
+```
 http://127.0.0.1:5000/
+```
 
 ### Technologies Used
  - Python (Pandas, NumPy, Scikit-Learn)
