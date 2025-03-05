@@ -8,4 +8,6 @@ statsmodels
 imbalanced-learn
 xgboost
 catboost
+flask
+fpdf
 -e .
